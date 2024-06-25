@@ -8,8 +8,7 @@ public class Main {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-
-        //SOMA DE DOIS NÚMEROS
+        System.out.println("SOMA DE DOIS NÚMEROS");
 
         int a, b;
 
@@ -20,13 +19,9 @@ public class Main {
 
         System.out.println("SOMA = " + (a + b));
 
-        sc.close();
+        //sc.close();
 
-
-
-
-
-        //CALCULO DA ÁREA
+        System.out.println("CALCULO DA ÁREA");
 
         double pi = 3.14159;
         double raio, area;
@@ -34,16 +29,15 @@ public class Main {
         System.out.println("Digite o valor do raio de um círculo: ");
         raio = sc.nextDouble();
         area = pi * (Math.pow(raio, 2.0));
-        System.out.printf("A = %.4f", area);
+        System.out.printf("A = %.4f%n", area);
 
-        sc.close();
+        //sc.close();
 
-
-        //CÁLCULO DA DIFERENÇA
+        System.out.println("CÁLCULO DA DIFERENÇA");
 
         int A, B, C, D, diferenca;
 
-        System.out.println("Digite os 4 números em sequeência: ");
+        System.out.println("Digite os 4 números em sequência: ");
         A = sc.nextInt();
         B = sc.nextInt();
         C = sc.nextInt();
@@ -53,50 +47,51 @@ public class Main {
 
         System.out.println("DIFERENÇA = " + diferenca);
 
-        sc.close();
+        //sc.close();
 
+        System.out.println("CÁLCULO DE SALÁRIO");
 
-        //CÁLCULO DE SALÁRIO
-
-        int numero, horas_trabalhadas;
-        double valor_hora, salario;
+        int n, horas;
+        double valor, salario;
 
         System.out.println("Digite suas informações: ");
         System.out.println("Número do funcionário: ");
-        numero = sc.nextInt();
+        n = sc.nextInt();
         System.out.println("Quantidade de horas trabalhadas: ");
-        horas_trabalhadas = sc.nextInt();
+        horas = sc.nextInt();
         System.out.println("Valor da hora trabalhada: ");
-        valor_hora = sc.nextDouble();
+        valor = sc.nextDouble();
 
-        salario = (valor_hora * horas_trabalhadas);
+        salario = (valor * horas);
 
-        System.out.printf("NUMBER = %d%nSALARY = U$ %.2f%n", numero, salario);
+        System.out.printf("NUMBER = %d%nSALARY = U$ %.2f%n", n, salario);
 
-        sc.close();
+        //sc.close();
 
+        System.out.println("CÁLCULO DO VALOR DOS PRODUTOS");
 
-        //CÁLCULO DO VALOR DOS PRODUTOS
-
-        int codigo_produto1, codigo_produto2, quantidade_produto1, quantidade_produto2;
-        double preco_produto1,preco_produto2, total;
+        int cod1, cod2, qtd1, qtd2;
+        double preco1,preco2, total;
 
         System.out.println("Digite os dados do primeiro produto");
         System.out.println("Código, Quantidade e Preço: ");
-        codigo_produto1 = sc.nextInt();
-        quantidade_produto1 = sc.nextInt();
-        preco_produto1 = sc.nextDouble();
+        cod1 = sc.nextInt();
+        qtd1 = sc.nextInt();
+        preco1 = sc.nextDouble();
 
         System.out.println("Digite os dados do segundo produto");
         System.out.println("Código, Quantidade e Preço: ");
-        codigo_produto2 = sc.nextInt();
-        quantidade_produto2 = sc.nextInt();
-        preco_produto2 = sc.nextDouble();
+        cod2 = sc.nextInt();
+        qtd2 = sc.nextInt();
+        preco2 = sc.nextDouble();
 
-        total = (preco_produto1 * quantidade_produto1) + (preco_produto2 * quantidade_produto2);
+        total = (preco1 * qtd1) + (preco2 * qtd2);
 
-        System.out.printf("VALOR A PAGAR: R$ %.2f", total);
-        sc.close();
+        System.out.printf("VALOR A PAGAR: R$ %.2f%n", total);
+
+        //sc.close();
+
+        System.out.println("CÁLCULOS MATEMÁTICOS");
 
         double F, G, H, triangulo, circulo, trapezio, quadrado, retangulo;
         double pI = 3.14159;
@@ -111,11 +106,12 @@ public class Main {
         quadrado = Math.pow(G, 2.00);
         retangulo = F * G;
 
-
         System.out.printf("TRIANGULO: %.3f%nCIRCULO: %.3f%nTRAPEZIO: %.3f%n" +
-                "QUADRADO: %.3f%nRETANGULO: %.3f%n", triangulo, circulo, trapezio, quadrado, retangulo);
+                "QUADRADO: %.3f%nRETANGULO: %.3f%n%n", triangulo, circulo, trapezio, quadrado, retangulo);
 
-        //FORMATAÇÃO DA SAÍDA DE DADOS
+        sc.close();
+
+        System.out.println("FORMATAÇÃO DA SAÍDA DE DADOS");
 
         String product1 = "Computer";
         String product2 = "Office desk";
@@ -136,5 +132,6 @@ public class Main {
         System.out.printf("Rouded (three deciaml places): %.3f%n", measure);
         Locale.setDefault(Locale.US);
         System.out.printf("US decimal point: %.3f%n", measure);
+
     }
 }
