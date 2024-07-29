@@ -7,8 +7,8 @@ public class Main {
         Scanner scan = new Scanner(System.in);
 
         System.out.println("Negativo ou Positivo");
-        int num = scan.nextInt();
 
+        int num = scan.nextInt();
         if (num < 0){
             System.out.println("NEGATIVO");
         } else {
@@ -27,6 +27,19 @@ public class Main {
         }
         //scan.close();
 
+        System.out.println("Múltiplos ou não?");
 
+        System.out.println("Digite o primeiro número");
+        int A = scan.nextInt();
+        System.out.println("Digite o segundo número");
+        int B = scan.nextInt();
+
+        if (A % B == 0 || B % A == 0){
+            System.out.println("São múltiplos");
+        } else {
+            System.out.println("Não são múltiplos");
+        }
+
+        scan.close();
     }
 }
